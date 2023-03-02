@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div id="snowfall"></div>
+    <div class="container">
+      <div class="card">
+        <div class="heading">
+          <h3>
+            A MACHINE LEARNING MODEL TO PREDICT THE GENDER AND AGE OF A PERSON
+          </h3>
+        </div>
+        <div style="margin: 4em 0 1.5em 0; font-weight: bolder">
+          INPUT IMAGE
+        </div>
+        <div class="opimg">
+          <img src="{{url_for('static',filename =imgpath) }}" />
+        </div>
+        <div style="margin-top: 2em; font-size: 1em; text-align: center">
+          <p style="font-weight: bolder">GENDER</p>
+          <p style="font-style: italic">{{output1}}</p>
+          <br />
+          <p style="font-weight: bolder">AGE</p>
+          <p style="font-style: italic">{{output2}}</p>
+        </div>
+        <form action="/predict" method="post" enctype="multipart/form-data">
+          <button class="icon-btn add-btn" type="submit">
+            <div class="add-icon"></div>
+            <div class="btn-txt">Add Photo</div>
+            <input type="file" name="imagefile" onchange="form.submit()" />
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+</html>
