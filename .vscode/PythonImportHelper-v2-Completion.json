@@ -54,7 +54,7 @@
         "kind": 2,
         "importPath": "application",
         "description": "application",
-        "peekOfCode": "def home():\n    return render_template('index.html')\n@application.route('/predict', methods=['POST', 'GET'])\ndef predict():\n    imagefile = request.files['imagefile']\n    image_path = \"./static/\" + imagefile.filename\n    imagefile.save(image_path)\n    model_path='./face_predict_model.h5'\n    #maping lables \n    gender_dict = {0:'Male', 1:'Female'}",
+        "peekOfCode": "def home():\n    return render_template('index.html')\n@application.route('/predict', methods=['POST', 'GET'])\ndef predict():\n    imagefile = request.files['imagefile']\n    image_path = \"./static/\" + imagefile.filename\n    imagefile.save(image_path)\n    model_path = './face_predict_model.h5'\n    # maping lables\n    gender_dict = {0: 'Male', 1: 'Female'}",
         "detail": "application",
         "documentation": {}
     },
@@ -63,7 +63,7 @@
         "kind": 2,
         "importPath": "application",
         "description": "application",
-        "peekOfCode": "def predict():\n    imagefile = request.files['imagefile']\n    image_path = \"./static/\" + imagefile.filename\n    imagefile.save(image_path)\n    model_path='./face_predict_model.h5'\n    #maping lables \n    gender_dict = {0:'Male', 1:'Female'}\n    # load the model\n    face_model=tf.keras.models.load_model(model_path)\n    # convert the image into numpy array",
+        "peekOfCode": "def predict():\n    imagefile = request.files['imagefile']\n    image_path = \"./static/\" + imagefile.filename\n    imagefile.save(image_path)\n    model_path = './face_predict_model.h5'\n    # maping lables\n    gender_dict = {0: 'Male', 1: 'Female'}\n    # load the model\n    face_model = tf.keras.models.load_model(model_path)\n    # convert the image into numpy array",
         "detail": "application",
         "documentation": {}
     },
@@ -72,7 +72,7 @@
         "kind": 5,
         "importPath": "application",
         "description": "application",
-        "peekOfCode": "application = Flask(__name__)\n@application.route('/', methods=['GET'])\ndef home():\n    return render_template('index.html')\n@application.route('/predict', methods=['POST', 'GET'])\ndef predict():\n    imagefile = request.files['imagefile']\n    image_path = \"./static/\" + imagefile.filename\n    imagefile.save(image_path)\n    model_path='./face_predict_model.h5'",
+        "peekOfCode": "application = Flask(__name__)\n@application.route('/', methods=['GET'])\ndef home():\n    return render_template('index.html')\n@application.route('/predict', methods=['POST', 'GET'])\ndef predict():\n    imagefile = request.files['imagefile']\n    image_path = \"./static/\" + imagefile.filename\n    imagefile.save(image_path)\n    model_path = './face_predict_model.h5'",
         "detail": "application",
         "documentation": {}
     }
