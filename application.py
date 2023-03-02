@@ -17,7 +17,7 @@ def predict():
     image_path = "./static/" + imagefile.filename
     imagefile.save(image_path)
    
-    model_path='./static/face_predict_model.h5'
+    model_path='./face_predict_model.h5'
     #maping lables 
     gender_dict = {0:'Male', 1:'Female'}
     # load the model
