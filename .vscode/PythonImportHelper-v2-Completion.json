@@ -1,0 +1,79 @@
+[
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "tensorflow",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tensorflow",
+        "description": "tensorflow",
+        "detail": "tensorflow",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "application",
+        "description": "application",
+        "peekOfCode": "def home():\n    return render_template('index.html')\n@application.route('/predict', methods=['POST', 'GET'])\ndef predict():\n    imagefile = request.files['imagefile']\n    image_path = \"./static/\" + imagefile.filename\n    imagefile.save(image_path)\n    model_path='./static/face_predict_model.h5'\n    #maping lables \n    gender_dict = {0:'Male', 1:'Female'}",
+        "detail": "application",
+        "documentation": {}
+    },
+    {
+        "label": "predict",
+        "kind": 2,
+        "importPath": "application",
+        "description": "application",
+        "peekOfCode": "def predict():\n    imagefile = request.files['imagefile']\n    image_path = \"./static/\" + imagefile.filename\n    imagefile.save(image_path)\n    model_path='./static/face_predict_model.h5'\n    #maping lables \n    gender_dict = {0:'Male', 1:'Female'}\n    # load the model\n    face_model=tf.keras.models.load_model(model_path)\n    # convert the image into numpy array",
+        "detail": "application",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "application",
+        "description": "application",
+        "peekOfCode": "application = Flask(__name__)\n@application.route('/', methods=['GET'])\ndef home():\n    return render_template('index.html')\n@application.route('/predict', methods=['POST', 'GET'])\ndef predict():\n    imagefile = request.files['imagefile']\n    image_path = \"./static/\" + imagefile.filename\n    imagefile.save(image_path)\n    model_path='./static/face_predict_model.h5'",
+        "detail": "application",
+        "documentation": {}
+    }
+]
