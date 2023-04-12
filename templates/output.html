@@ -32,16 +32,16 @@
         <div class="opimg">
           <img
             src="{{url_for('static',filename =imgpath) }}"
-            width="500"
-            height="600"
+            width="200"
+            height="200"
           />
         </div>
         <div style="margin-top: 2em; font-size: 1em; text-align: center">
           <p style="font-weight: bolder">GENDER</p>
           <p style="font-style: italic">{{output1}}</p>
           <br />
-          <p style="font-weight: bolder">AGE</p>
-          <p style="font-style: italic">{{output2}}</p>
+          <!-- <p style="font-weight: bolder">AGE</p>
+          <p style="font-style: italic">{{output2}}</p> -->
         </div>
         <form action="/predict" method="post" enctype="multipart/form-data">
           <button class="icon-btn add-btn" type="submit">
