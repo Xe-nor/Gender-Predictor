@@ -2,7 +2,7 @@
 
 Welcome to the README page for our gender predicting ML model created using Flask!
 
-This ML model to predict the gender of a person based on certain features. The model was built using Python and various machine learning libraries, and is deployed using Flask, a popular web framework for Python.
+A ML model to predict the gender of a person based on certain features. The model was built using Python and various machine learning libraries, and is deployed using Flask, a popular web framework for Python.
 
 ## Built With
 
